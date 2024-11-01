@@ -9,11 +9,15 @@ public class Sudoku {
         List<List<Integer>> result = new ArrayList<>(); 
         List<Integer> temp = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the size of the cage :");
         int cageSize = scanner.nextInt();
+        System.out.println("Enter the total sum of the cage :");
         int cageSum = scanner.nextInt();
         scanner.close();
         addAllPossibleResults(result, temp, cageSum, cageSize,1);
-        System.out.println(result);
+        for (List<Integer> res : result) {
+            System.out.println(res);
+        }
     }
     public static void addAllPossibleResults(List<List<Integer>> list, List<Integer> temp,int totalSum, int totalCount, int start){
         if (totalSum==0 && totalCount==0) {
