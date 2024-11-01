@@ -3,7 +3,7 @@ package Resistor;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class ColorDuo {
+public class ColorTrio {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         final HashMap<String, Integer> map = new HashMap<>();
@@ -28,8 +28,21 @@ public class ColorDuo {
                 System.out.println("Please enter one of the available colors!!!");
             }
         }
+        String unit = switch(color[2]) {
+            case "brown" -> "0 \u03A9";
+            case  "red" -> "00 \u03A9";
+            case "orange" -> " K\u03A9";
+            case "yellow" -> "0 K\u03A9";
+            case "green" -> "00 K\u03A9";
+            case "blue" -> " M\u03A9";
+            case  "violet" -> "0 M\u03A9";
+            case "grey" -> " 00 M\u03A9";
+            case "white" -> " G\u03A9";
+            default -> " \u03A9";
+        };
         
-        System.out.println("Color Code : "+ (map.get(color[0])*10 + map.get(color[1])));
+        System.out.println("Color Code : "+ (map.get(color[0])*10 + map.get(color[1])) + unit);
         scanner.close();
+
     }
 }
