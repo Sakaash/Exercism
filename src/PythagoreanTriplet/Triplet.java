@@ -26,5 +26,6 @@ public class Triplet {
         }
         for (List<Integer> li : list) 
             System.out.println(li);
+        scanner.close();
     }
 }
