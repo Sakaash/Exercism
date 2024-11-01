@@ -18,7 +18,7 @@ public class ColorDuo {
         map.put("grey", 8);
         map.put("white", 9);
         System.out.println("Availabe colors are"+ "\n"+map.keySet());
-        System.out.println("Enter a valid color to find its color code :");
+        System.out.println("Enter all four resistor color code :");
         String[] color = new String[4];     
         for (int i = 0; i < color.length; i++) {
             while (true) {
