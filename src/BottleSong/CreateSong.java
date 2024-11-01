@@ -1,7 +1,5 @@
 package BottleSong;
 
-import java.util.Scanner;
-
 public class CreateSong {
     public static void main(String[] args) {
         String[] numbers = {"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"};
