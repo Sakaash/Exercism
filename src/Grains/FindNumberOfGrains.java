@@ -19,7 +19,7 @@ public class FindNumberOfGrains {
 
         switch (choice) {
             case 1:
-                System.out.println(grainsOnSquare(65));
+                System.out.println(grainsOnSquare(65).subtract(BigInteger.valueOf(1)));
                 break;
             case 2:
                 int square = 0;
@@ -29,7 +29,7 @@ public class FindNumberOfGrains {
                         square = scanner.nextInt();
                         if(square>=1 && square<=64)
                             break;
-                        System.out.println("Enter the square number between 1and 64.");
+                        System.out.println("Enter the square number between 1 and 64.");
                     }
                 } catch (Exception e) {
                     System.out.println(e.getStackTrace());
