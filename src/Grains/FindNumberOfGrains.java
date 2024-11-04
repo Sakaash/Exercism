@@ -1,5 +1,6 @@
 package Grains;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class FindNumberOfGrains {
@@ -18,7 +19,7 @@ public class FindNumberOfGrains {
 
         switch (choice) {
             case 1:
-                System.out.println(grainsOnSquare(64));
+                System.out.println(grainsOnSquare(65));
                 break;
             case 2:
                 int square = 0;
@@ -38,8 +39,8 @@ public class FindNumberOfGrains {
         }
         scanner.close();            
     }
-    static long grainsOnSquare(int square) {
-        return (long)Math.pow(2, square-1);
+    static BigInteger grainsOnSquare(int square) {
+        return BigInteger.valueOf(2).pow(square-1);
     }
 }
 
